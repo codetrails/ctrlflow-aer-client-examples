@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Include up to 150 stack frames from the caller. -->
+    <!-- This number should be large enough to capture the full stack trace of a logging call. -->
+    <param name="maxCallerDataDepth" value="150" />
+
+    <!-- Compute packaging data for each stack frame. This is required for <includeCallerData> below. -->
+    <!-- See <http://logback.qos.ch/manual/configuration.html#packagingData> -->
+    <param name="packagingDataEnabled" value="true" />
+
+    <appender name="AER" class="com.ctrlflow.aer.client.logback.AerAppender">
+
+        <!-- The submission URL of the Ctrlflow Automated Error Reporting server. -->
+        <!-- The following causes error reports to be send to the public demo server at <https://demo.ctrlflow.com/> -->
+        <url>https://demo.ctrlflow.com/community/new</url>
+
+        <!-- The user name to send along with error reports. Defaults to the value of the user.name system property. -->
+        <userName>Ctrlflow Automated Error Reporting Client Example</userName>
+
+        <!-- The email address to send along with error reports. -->
+        <email>info@codetrails.com</email>
+
+        <!-- The following uses filtering by the maven-resource-plugin to obtain appropriate element values from the POM.  -->
+        <!-- See <https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html> -->
+
+        <!-- The product ID to send along with error reports. -->
+        <productId>${project.artifactId}</productId>
+        <!-- The build ID to send along with error reports. -->
+        <buildId>${project.version}</buildId>
+    </appender>
+
+    <!-- Send messages to the Ctrlflow Automated Error Reporting server asynchronously, as network I/O may be time consuming. -->
+    <!-- See <http://logback.qos.ch/manual/appenders.html#AsyncAppender> -->
+    <appender name="ASYNC-AER" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="AER" />
+
+        <!-- Only send error reports for messages with log level ERROR. -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+
+        <!-- Include information on the bundles referenced by the stack trace in the error report. -->
+        <includeCallerData>true</includeCallerData>
+
+        <!-- Drop messages if the queue is full rather than blocking the logging thread. -->
+        <neverBlock>true</neverBlock>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ASYNC-AER" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

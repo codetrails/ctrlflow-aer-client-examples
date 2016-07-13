@@ -1,0 +1,13 @@
+Plain Java Example
+==================
+
+A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] through the popular http://logback.qos.ch/[Logback] logging framework.
+
+The example essentially consists of just two files:
+
+link:src/main/java/com/ctrlflow/aer/client/examples/Main.java[`src/main/java/com/ctrlflow/aer/client/examples/Main.java`]::
+A simple stand-alone Java application.
+When run, it will send an error report to the https://demo.ctrlflow.com/[public demo server].
+
+link:src/main/resources/logback.xml[`src/main/resources/logback.xml`]::
+The logback configuration configuring the `AerAppender` from the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.logback[com.ctrlflow.aer.client.logback] bundle.

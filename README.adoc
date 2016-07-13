@@ -1,0 +1,10 @@
+Ctrlflow Automated Error Reporting Client Examples
+==================================================
+
+Examples of how to use various clients to communicate with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server].
+
+At the moment, the following examples are available:
+
+link:plain-java-example[Plain Java Example]::
+If you are developing a stand-alone *Java application* that uses the popular http://logback.qos.ch/[Logback] logging framework, have a look at this example.
+It shows you how to configure Logback to send error reports to a Ctrlflow AER server.
