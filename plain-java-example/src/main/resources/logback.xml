@@ -28,6 +28,17 @@
         <productId>${project.artifactId}</productId>
         <!-- The build ID to send along with error reports. -->
         <buildId>${project.version}</buildId>
+
+        <!-- Auxiliary information to send along with error reports. -->
+        <auxiliaryInformation>
+            <key>user-home</key>
+            <value>${user.home}</value>
+        </auxiliaryInformation>
+        <!-- Define repeatedly to add more auxiliary information. -->
+        <auxiliaryInformation>
+            <key>user-working-dir</key>
+            <value>${user.dir}</value>
+        </auxiliaryInformation>
     </appender>
 
     <!-- Send messages to the Ctrlflow Automated Error Reporting server asynchronously, as network I/O may be time consuming. -->
