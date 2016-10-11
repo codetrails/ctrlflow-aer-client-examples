@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.ctrlflow.aer.client.bundles</groupId>
         <artifactId>bundles</artifactId>
-        <version>2.0.1</version>
+        <version>2.0.0</version>
     </parent>
 
     <groupId>com.ctrlflow.aer.client.examples</groupId>
@@ -18,7 +18,8 @@
     <url>https://www.ctrlflow.com/automated-error-reporting/</url>
 
     <modules>
-        <module>plain-java-example</module>
+        <module>logback-java-example</module>
+        <module>simple-java-example</module>
     </modules>
 
     <scm>
@@ -27,4 +28,9 @@
         <url>https://github.com/codetrails/ctrlflow-aer-client-examples/tree/master</url>
         <tag>HEAD</tag>
     </scm>
+
+    <properties>
+        <!-- The Ctrlflow Automated Error Reporting Clients versions the examples are for -->
+        <aerClientVersion>2.0.1-SNAPSHOT</aerClientVersion>
+    </properties>
 </project>

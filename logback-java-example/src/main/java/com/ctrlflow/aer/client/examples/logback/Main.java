@@ -1,4 +1,4 @@
-package com.ctrlflow.aer.client.examples;
+package com.ctrlflow.aer.client.examples.logback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class Main {
             // No error report will be send for this message, as its log level is only INFO.
             LOG.info("Application started.");
 
-            throw new NullPointerException();
+            throw new IllegalArgumentException("invalid");
         } catch (Exception e) {
             // An error report (including a stack trace) will be send for this message, as its log level is ERROR.
             LOG.error("An error occurred", e);

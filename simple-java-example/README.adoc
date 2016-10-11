@@ -1,0 +1,15 @@
+Simple Java Example
+===================
+
+A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] using the Ctrlflow AER Simple Client.
+
+The example essentially consists of just two files:
+
+link:src/main/java/com/ctrlflow/aer/client/examples/simple/Main.java[`src/main/java/com/ctrlflow/aer/client/examples/simple/Main.java`]::
+A simple stand-alone Java application.
+When run, it will send two error reports to the https://demo.ctrlflow.com/[public demo server] hosted by Codetrails:
+one for an exception explicitly handled and one for an uncaught exception, handled by a `Thread.UncaughtExceptionHandler`.
+
+link:pom.xml[`pom.xml`]::
+The https://maven.apache.org/pom.html[POM] for https://maven.apache.org/[Apache Maven].
+It declares the necessary dependencies on the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.simple[com.ctrlflow.aer.client.simple] and https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.dto[com.ctrlflow.aer.client.dto] bundles.
