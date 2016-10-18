@@ -25,8 +25,9 @@ public class Main {
     private static void sendErrorReport(String message, Throwable e) {
         try {
             Incident incident = IncidentBuilder.from(e)
-                    // The build ID is required for an incident to be accepted by the server.
-                    .withEclipseBuildId("com.ctrlflow.aer.client.examples.simple")
+                    // The product ID and version are required for an incident to be accepted by the server.
+                    .withProductId("com.ctrlflow.aer.client.examples.simple")
+                    .withProductVersion("1.0.0")
                     // Other properties of the incident (e.g., the log message) are optional;
                     // they are available through additional with* methods of the IncidentBuilder.
                     .withLogMessage(message).build();

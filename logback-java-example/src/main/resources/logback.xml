@@ -26,8 +26,8 @@
 
         <!-- The product ID to send along with error reports. -->
         <productId>${project.artifactId}</productId>
-        <!-- The build ID to send along with error reports. -->
-        <buildId>${project.version}</buildId>
+        <!-- The product version to send along with error reports. -->
+        <productVersion>${project.version}</productVersion>
 
         <!-- Auxiliary information to send along with error reports. -->
         <auxiliaryInformation>
