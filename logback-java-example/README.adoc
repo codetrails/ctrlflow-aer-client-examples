@@ -10,7 +10,7 @@ A simple stand-alone Java application.
 When run, it will send an error report to the https://demo.ctrlflow.com/[public demo server] hosted by Codetrails.
 
 link:src/main/resources/logback.xml[`src/main/resources/logback.xml`]::
-The logback configuration configuring the `AerAppender` from the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.logback[com.ctrlflow.aer.client.logback] bundle.
+The Logback configuration file configuring the `AerAppender` from the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.logback[com.ctrlflow.aer.client.logback] bundle.
 
 link:pom.xml[`pom.xml`]::
 The https://maven.apache.org/pom.html[POM] for https://maven.apache.org/[Apache Maven].

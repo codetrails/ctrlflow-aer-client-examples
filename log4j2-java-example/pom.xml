@@ -9,33 +9,28 @@
         <relativePath>..</relativePath>
     </parent>
 
-    <artifactId>logback-java-example</artifactId>
+    <artifactId>log4j2-java-example</artifactId>
 
-    <name>Logback Java Example</name>
-    <description>Plain Java example for communication with the Ctrlflow Automated Error Reporting server through Logback.</description>
+    <name>Log4j 2 Java Example</name>
+    <description>Plain Java example for communication with the Ctrlflow Automated Error Reporting server through Log4j 2.</description>
     <url>https://www.ctrlflow.com/automated-error-reporting/</url>
 
     <scm>
         <connection>scm:git:https://github.com/sewe/ctrlflow-aer-client-examples.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:codetrails/ctrlflow-aer-client-examples.git</developerConnection>
-        <url>https://github.com/codetrails/ctrlflow-aer-client-examples/tree/master/logback-java-example</url>
+        <url>https://github.com/codetrails/ctrlflow-aer-client-examples/tree/master/log4j2-java-example</url>
         <tag>HEAD</tag>
     </scm>
 
     <dependencies>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.6</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.8</version>
         </dependency>
         <dependency>
             <groupId>com.ctrlflow.aer.client.bundles</groupId>
-            <artifactId>com.ctrlflow.aer.client.logback</artifactId>
+            <artifactId>com.ctrlflow.aer.client.log4j2</artifactId>
             <version>${aerClientVersion}</version>
             <scope>runtime</scope>
         </dependency>
@@ -56,7 +51,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.ctrlflow.aer.client.examples.logback.Main</mainClass>
+                                <mainClass>com.ctrlflow.aer.client.examples.log4j2.Main</mainClass>
                             </manifest>
                         </archive>
                     </configuration>

@@ -1,0 +1,17 @@
+Log4j 2 Java Example
+====================
+
+A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] through the popular https://logging.apache.org/log4j/2.x/[*Log4j 2*] logging framework.
+
+The example essentially consists of just three files:
+
+link:src/main/java/com/ctrlflow/aer/client/examples/log4j2/Main.java[`src/main/java/com/ctrlflow/aer/client/examples/log4j2/Main.java`]::
+A simple stand-alone Java application.
+When run, it will send an error report to the https://demo.ctrlflow.com/[public demo server] hosted by Codetrails.
+
+link:src/main/resources/log4j2.xml[`src/main/resources/log4j2.xml`]::
+The Log4j 2 configuration file configuring the `AerAppender` from the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.log4j2[com.ctrlflow.aer.client.log4j2] bundle.
+
+link:pom.xml[`pom.xml`]::
+The https://maven.apache.org/pom.html[POM] for https://maven.apache.org/[Apache Maven].
+It declares the necessary dependencies on Log4j 2 and the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.log4j2[com.ctrlflow.aer.client.log4j2] bundle.

@@ -18,6 +18,7 @@
     <url>https://www.ctrlflow.com/automated-error-reporting/</url>
 
     <modules>
+        <module>log4j2-java-example</module>
         <module>logback-java-example</module>
         <module>simple-java-example</module>
     </modules>
@@ -39,6 +40,11 @@
             <dependency>
                 <groupId>com.ctrlflow.aer.client.bundles</groupId>
                 <artifactId>com.ctrlflow.aer.client.dto</artifactId>
+                <version>${aerClientVersion}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ctrlflow.aer.client.bundles</groupId>
+                <artifactId>com.ctrlflow.aer.client.log4j2</artifactId>
                 <version>${aerClientVersion}</version>
             </dependency>
             <dependency>

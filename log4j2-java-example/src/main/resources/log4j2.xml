@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Appenders>
+
+        <!-- The required "url" attribute configures provides the submission URL of the Ctrlflow Automated Error Reporting server. -->
+        <!-- The optional "userName" attribute configures the user name to send along with error reports. It defaults to the value of the user.name system property. -->
+        <!-- The optional "email" attribute configures the email address to send along with error reports. -->
+        <!-- The optional "productId" and "productVersion" attributes configure the product ID and version to send along with error reports. -->
+        <!-- The following uses filtering by the maven-resource-plugin to obtain appropriate attributes values from the POM.  -->
+        <!-- See <https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html> -->
+        <AER name="AER"
+                url="https://demo.ctrlflow.com/community/new"
+                userName="Ctrlflow Automated Error Reporting Client Example"
+                email="info@codetrails.com"
+                productId="${project.artifactId}"
+                productVersion="${project.version}">
+
+            <!-- Auxiliary information to send along with error reports. -->
+            <AuxiliaryInformation key="user-home" value="${user.home}" />
+            <!-- Define repeatedly to add more auxiliary information. -->
+            <AuxiliaryInformation key="user-working-dir" value="${user.dir}" />
+        </AER>
+
+        <!-- Send messages to the Ctrlflow Automated Error Reporting server asynchronously, as network I/O may be time consuming. -->
+        <!-- See <https://logging.apache.org/log4j/2.x/manual/appenders#AsyncAppender> -->
+        <Async name="Async-AER">
+            <AppenderRef ref="AER" />
+
+            <!-- Only send error reports for messages with log level ERROR. -->
+            <ThresholdFilter level="error" />
+
+            <!-- Include information on the bundles referenced by the stack trace in the error report. -->
+            <includeLocation>true</includeLocation>
+
+            <!-- Drop messages if the queue is full rather than blocking the logging thread. -->
+            <blocking>false</blocking>
+        </Async>
+
+        <Console name="StdOut" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- Note: Log4j 2 also offers the option to make *loggers* rather than the *appenders* (see above) asynchronous. -->
+        <!-- See <https://logging.apache.org/log4j/2.x/manual/async> -->
+        <Root level="info">
+            <AppenderRef ref="Async-AER" />
+            <AppenderRef ref="StdOut" />
+        </Root>
+    </Loggers>
+
+</Configuration>
