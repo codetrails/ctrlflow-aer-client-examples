@@ -10,7 +10,7 @@ If you are developing a stand-alone *Java application* that uses the popular htt
 It shows you how to configure Log4j 2 to send error reports to a Ctrlflow AER server.
 
 link:logback-java-example[Logback Java Example]::
-If you are developing a stand-alone *Java application* that uses the popular http://logback.qos.ch/[*Logback*] logging framework, have a look at this example.
+If you are developing a stand-alone *Java application* that uses the popular https://logback.qos.ch/[*Logback*] logging framework, have a look at this example.
 It shows you how to configure Logback to send error reports to a Ctrlflow AER server.
 
 link:simple-java-example[Simple Java Example]::

@@ -1,7 +1,7 @@
 Logback Java Example
 ====================
 
-A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] through the popular http://logback.qos.ch/[Logback] logging framework.
+A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] through the popular https://logback.qos.ch/[Logback] logging framework.
 
 The example essentially consists of just three files:
 
