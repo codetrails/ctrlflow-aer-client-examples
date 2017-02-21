@@ -5,7 +5,7 @@ Examples of how to use various clients to communicate with the https://www.ctrlf
 
 At the moment, the following examples are available:
 
-link:logback-java-example[Log4j 2 Java Example]::
+link:log4j2-java-example[Log4j 2 Java Example]::
 If you are developing a stand-alone *Java application* that uses the popular https://logging.apache.org/log4j/2.x/[*Log4j 2*] logging framework, have a look at this example.
 It shows you how to configure Log4j 2 to send error reports to a Ctrlflow AER server.
 
