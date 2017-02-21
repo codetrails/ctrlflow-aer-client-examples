@@ -6,7 +6,7 @@
     <param name="maxCallerDataDepth" value="150" />
 
     <!-- Compute packaging data for each stack frame. This is required for <includeCallerData> below. -->
-    <!-- See <http://logback.qos.ch/manual/configuration.html#packagingData> -->
+    <!-- See <https://logback.qos.ch/manual/configuration.html#packagingData> -->
     <param name="packagingDataEnabled" value="true" />
 
     <appender name="AER" class="com.ctrlflow.aer.client.logback.AerAppender">
@@ -42,7 +42,7 @@
     </appender>
 
     <!-- Send messages to the Ctrlflow Automated Error Reporting server asynchronously, as network I/O may be time consuming. -->
-    <!-- See <http://logback.qos.ch/manual/appenders.html#AsyncAppender> -->
+    <!-- See <https://logback.qos.ch/manual/appenders.html#AsyncAppender> -->
     <appender name="ASYNC-AER" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="AER" />
 

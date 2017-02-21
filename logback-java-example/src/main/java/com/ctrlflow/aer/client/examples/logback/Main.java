@@ -10,7 +10,7 @@ public class Main {
     /**
      * The logger used to report any log messages.
      * 
-     * @see <a href="http://www.slf4j.org/manual.html">Simple Logging Facade for Java (SLF4J) manual</a>
+     * @see <a href="https://www.slf4j.org/manual.html">Simple Logging Facade for Java (SLF4J) manual</a>
      */
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
@@ -34,7 +34,7 @@ public class Main {
      * 
      * This must be triggered explicitly as error reports are configured to be send asynchronously.
      * 
-     * @see <a href="http://logback.qos.ch/manual/configuration.html#stopContext">Stopping logback-classic</a>
+     * @see <a href="https://logback.qos.ch/manual/configuration.html#stopContext">Stopping logback-classic</a>
      */
     private static void flushSendQueue() {
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();

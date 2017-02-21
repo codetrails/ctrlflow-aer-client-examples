@@ -8,7 +8,7 @@ public class Main {
     /**
      * The logger used to report any log messages.
      * 
-     * @see <a href="http://logging.apache.org/log4j/2.x/manual/">Log4j 2 manual</a>
+     * @see <a href="https://logging.apache.org/log4j/2.x/manual/">Log4j 2 manual</a>
      */
     private static final Logger LOG = LogManager.getLogger();
 
