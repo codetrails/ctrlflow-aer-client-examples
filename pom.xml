@@ -18,6 +18,7 @@
     <url>https://www.ctrlflow.com/automated-error-reporting/</url>
 
     <modules>
+        <module>jul-java-example</module>
         <module>log4j2-java-example</module>
         <module>logback-java-example</module>
         <module>simple-java-example</module>

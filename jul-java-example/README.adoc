@@ -1,0 +1,18 @@
+`java.util.logging` Java Example
+================================
+
+A plain Java example for communication with the https://www.ctrlflow.com/automated-error-reporting/[Ctrlflow Automated Error Reporting (AER) server] through the https://docs.oracle.com/javase/8/docs/technotes/guides/logging/[*`java.util.logging`*] framework.
+
+The example essentially consists of just three files:
+
+link:src/main/java/com/ctrlflow/aer/client/examples/jul/Main.java[`src/main/java/com/ctrlflow/aer/client/examples/jul/Main.java`]::
+A simple stand-alone Java application.
+When run, it will send an error report to the https://demo.ctrlflow.com/[public demo server] hosted by Codetrails.
+
+link:src/main/resources/logging.properties[`src/main/resources/logging.properties`]::
+The `java.util.logging` configuration file configuring the `AerHandler` from the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.jul[com.ctrlflow.aer.client.jul] bundle.
+Point the `java.util.logging.config.file` system property to this file to enable the configuration.
+
+link:pom.xml[`pom.xml`]::
+The https://maven.apache.org/pom.html[POM] for https://maven.apache.org/[Apache Maven].
+It declares the necessary dependency on the https://github.com/codetrails/ctrlflow-aer-client/tree/master/bundles/com.ctrlflow.aer.client.jul[com.ctrlflow.aer.client.jul] bundle.

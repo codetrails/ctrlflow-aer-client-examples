@@ -13,6 +13,10 @@ link:logback-java-example[Logback Java Example]::
 If you are developing a stand-alone *Java application* that uses the popular https://logback.qos.ch/[*Logback*] logging framework, have a look at this example.
 It shows you how to configure Logback to send error reports to a Ctrlflow AER server.
 
+link:jul-java-example[`java.util.logging` Java Example]::
+If you are developing a stand-alone *Java application* that uses the https://docs.oracle.com/javase/8/docs/technotes/guides/logging/[*`java.util.logging`*] framework, have a look at this example.
+It shows you how to configure `java.util.logging` to send error reports to a Ctrlflow AER server.
+
 link:simple-java-example[Simple Java Example]::
 If you are developing a stand-alone *Java application*  that uses none of the logging frameworks supported out-of-the-box, have a look at this example.
 It shows you how to use the Ctrlflow AER Simple Client to send caught exceptions to your server.
